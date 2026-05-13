@@ -1,0 +1,18 @@
+{
+  "soft_equivalences": [
+    ["a", "aa"],
+    ["i", "ii"],
+    ["u", "uu"]
+  ],
+  "soft_tokens": [":", "ŋ"],
+  "ending_tokens_soft": true,
+  "waqf_soft": true,
+  "tanwin_soft": true,
+  "ghunnah_soft": true,
+  "decision_thresholds": {
+    "recognized": 0.18,
+    "recognized_with_checks": 0.30,
+    "uncertain": 0.45,
+    "probably_wrong": 0.45
+  }
+}
