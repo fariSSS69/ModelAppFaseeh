@@ -9,11 +9,6 @@ data/
 *.flac
 *.m4a
 
-models/**/best/
-models/**/*.bin
-models/**/*.safetensors
-models/**/*.pt
-models/**/*.pth
 
 outputs/**/*.json
 outputs/**/*.csv
