@@ -18,23 +18,26 @@ PYTHON_EXE = os.environ.get("FASSEH_PYTHON", sys.executable)
 
 MODEL_PATH = os.environ.get(
     "FASSEH_MODEL",
-    r"models\fasseh_v2_native_iqraeval_10000_001\best"
+    str(ROOT / "models" / "fasseh_v2_native_iqraeval_10000_001" / "best")
 )
 
 REFS_PATH = os.environ.get(
     "FASSEH_REFS",
-    r"outputs\v2_native\quran_refs_v2_native_full.csv"
+    str(ROOT / "outputs" / "v2_native" / "quran_refs_v2_native_full.csv")
 )
 
 VOCAB_PATH = os.environ.get(
     "FASSEH_VOCAB",
-    r"outputs\v2_native\vocab_quran_phonemizer_v2_native.json"
+    str(ROOT / "outputs" / "v2_native" / "vocab_quran_phonemizer_v2_native.json")
 )
 
 CONFIG_PATH = os.environ.get(
     "FASSEH_CONFIG",
-    r"configs\scoring_v2_native_baseline_002_prudent.json"
+    str(ROOT / "configs" / "scoring_v2_native_baseline_002_prudent.json")
 )
+
+SCORE_SCRIPT = str(ROOT / "scripts" / "score_ayah_v2_native_product.py")
+ALIGN_SCRIPT = str(ROOT / "scripts" / "forced_align_v2_reference.py")
 
 RUNTIME_DIR = ROOT / "runtime_demo"
 UPLOAD_DIR = RUNTIME_DIR / "uploads"
@@ -359,7 +362,7 @@ async def score(
     try:
         run_cmd([
             PYTHON_EXE,
-            "scripts/score_ayah_v2_native_product.py",
+            SCORE_SCRIPT,
             "--model", MODEL_PATH,
             "--audio", str(audio_path),
             "--ayah-key", ayah_key,
@@ -371,7 +374,7 @@ async def score(
 
         run_cmd([
             PYTHON_EXE,
-            "scripts/forced_align_v2_reference.py",
+            ALIGN_SCRIPT,
             "--model", MODEL_PATH,
             "--audio", str(audio_path),
             "--ayah-key", ayah_key,
