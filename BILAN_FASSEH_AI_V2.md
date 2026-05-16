@@ -106,8 +106,8 @@ Métriques approximatives du modèle actuel :
 | `eval_loss` | 0.5404 |
 | `eval_per` | 0.1225 |
 | `eval_score` | 87.75 |
-| PER moyen sur Naba, tests Redwane | ~0.072 |
-| PER sur Ayat al-Kursi, test Redwane | ~0.1453 |
+| PER moyen sur Naba, tests | ~0.072 |
+| PER sur Ayat al-Kursi, test | ~0.1453 |
 | Rejet des mauvais versets | 6/6 |
 
 Ce modèle est actuellement la meilleure baseline ASR phonémique du projet.
@@ -664,7 +664,7 @@ Le scorer sépare notamment :
 
 ## Validation du scorer V2
 
-Le scorer V2 a été validé sur les audios Redwane :
+Le scorer V2 a été validé sur les audios :
 
 - les 12 premiers versets de Sourate An-Naba ;
 - Ayat al-Kursi ;
@@ -744,7 +744,7 @@ Métriques approximatives :
 | `eval_loss` | 0.5404 |
 | `eval_per` | 0.1225 |
 | `eval_score` | 87.75 |
-| PER moyen sur Naba, tests Redwane | ~0.072 |
+| PER moyen sur Naba, tests  | ~0.072 |
 | PER sur Ayat al-Kursi | ~0.1453 |
 | Rejet mauvais versets | 6/6 |
 
